@@ -1,6 +1,6 @@
-import { twoSum } from "./solution";
+import { twoSum } from "./array_two_sum";
 
-describe("twoSum", () => {
+describe("001. Two Sum", () => {
   it("should return the correct indices", () => {
     const nums = [2, 7, 11, 15];
     const target = 9;
