@@ -12,10 +12,19 @@
  *   -1 -> the picked number is lower than num
  *    1 -> the picked number is higher than num
  *    0 -> num is the picked number
- * Replace this stub when running locally.
+ * Locally the picked number is supplied by setPick().
  */
+let pick: number | null = null;
+
+export function setPick(num: number): void {
+  pick = num;
+}
+
 export function guess(num: number): number {
-  throw new Error('Not implemented: guess API stub');
+  if (pick === null) throw new Error('No number picked: call setPick() first');
+  if (num > pick) return -1;
+  if (num < pick) return 1;
+  return 0;
 }
 
 export function guessNumber(n: number): number {

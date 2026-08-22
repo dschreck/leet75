@@ -5,6 +5,11 @@ describe('649. Dota2 Senate', () => {
     expect(predictPartyVictory).toBeInstanceOf(Function);
   });
 
-  it.todo('example 1');
-  it.todo('example 2');
+  it('example 1: Radiant bans the only Dire senator', () => {
+    expect(predictPartyVictory('RD')).toBe('Radiant');
+  });
+
+  it('example 2: Dire outnumbers Radiant', () => {
+    expect(predictPartyVictory('RDD')).toBe('Dire');
+  });
 });

@@ -5,6 +5,11 @@ describe('392. Is Subsequence', () => {
     expect(isSubsequence).toBeInstanceOf(Function);
   });
 
-  it.todo('example 1');
-  it.todo('example 2');
+  it('example 1: "abc" is a subsequence of "ahbgdc"', () => {
+    expect(isSubsequence('abc', 'ahbgdc')).toBe(true);
+  });
+
+  it('example 2: "axc" is not a subsequence of "ahbgdc"', () => {
+    expect(isSubsequence('axc', 'ahbgdc')).toBe(false);
+  });
 });

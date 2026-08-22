@@ -5,6 +5,11 @@ describe('72. Edit Distance', () => {
     expect(minDistance).toBeInstanceOf(Function);
   });
 
-  it.todo('example 1');
-  it.todo('example 2');
+  it('example 1: replace then two removals', () => {
+    expect(minDistance('horse', 'ros')).toBe(3);
+  });
+
+  it('example 2: mixed removals, replacements and an insert', () => {
+    expect(minDistance('intention', 'execution')).toBe(5);
+  });
 });

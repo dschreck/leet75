@@ -5,6 +5,15 @@ describe('136. Single Number', () => {
     expect(singleNumber).toBeInstanceOf(Function);
   });
 
-  it.todo('example 1');
-  it.todo('example 2');
+  it('example 1: [2,2,1]', () => {
+    expect(singleNumber([2, 2, 1])).toBe(1);
+  });
+
+  it('example 2: [4,1,2,1,2]', () => {
+    expect(singleNumber([4, 1, 2, 1, 2])).toBe(4);
+  });
+
+  it('example 3: single element', () => {
+    expect(singleNumber([1])).toBe(1);
+  });
 });

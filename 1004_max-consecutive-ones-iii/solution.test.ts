@@ -5,6 +5,13 @@ describe('1004. Max Consecutive Ones III', () => {
     expect(longestOnes).toBeInstanceOf(Function);
   });
 
-  it.todo('example 1');
-  it.todo('example 2');
+  it('example 1: k = 2', () => {
+    expect(longestOnes([1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0], 2)).toBe(6);
+  });
+
+  it('example 2: k = 3', () => {
+    expect(
+      longestOnes([0, 0, 1, 1, 0, 0, 1, 1, 1, 0, 1, 1, 0, 0, 0, 1, 1, 1, 1], 3),
+    ).toBe(10);
+  });
 });

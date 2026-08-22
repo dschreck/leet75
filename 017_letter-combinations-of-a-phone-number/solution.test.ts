@@ -5,6 +5,21 @@ describe('17. Letter Combinations of a Phone Number', () => {
     expect(letterCombinations).toBeInstanceOf(Function);
   });
 
-  it.todo('example 1');
-  it.todo('example 2');
+  it('example 1: two digits', () => {
+    expect(letterCombinations('23')).toEqual([
+      'ad',
+      'ae',
+      'af',
+      'bd',
+      'be',
+      'bf',
+      'cd',
+      'ce',
+      'cf',
+    ]);
+  });
+
+  it('example 2: single digit', () => {
+    expect(letterCombinations('2')).toEqual(['a', 'b', 'c']);
+  });
 });

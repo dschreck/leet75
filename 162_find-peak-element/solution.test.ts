@@ -5,6 +5,11 @@ describe('162. Find Peak Element', () => {
     expect(findPeakElement).toBeInstanceOf(Function);
   });
 
-  it.todo('example 1');
-  it.todo('example 2');
+  it('example 1: single peak at index 2', () => {
+    expect(findPeakElement([1, 2, 3, 1])).toBe(2);
+  });
+
+  it('example 2: either peak index is accepted', () => {
+    expect([1, 5]).toContain(findPeakElement([1, 2, 1, 3, 5, 6, 4]));
+  });
 });

@@ -5,6 +5,15 @@ describe('1143. Longest Common Subsequence', () => {
     expect(longestCommonSubsequence).toBeInstanceOf(Function);
   });
 
-  it.todo('example 1');
-  it.todo('example 2');
+  it('example 1: subsequence "ace"', () => {
+    expect(longestCommonSubsequence('abcde', 'ace')).toBe(3);
+  });
+
+  it('example 2: identical strings', () => {
+    expect(longestCommonSubsequence('abc', 'abc')).toBe(3);
+  });
+
+  it('example 3: no common subsequence', () => {
+    expect(longestCommonSubsequence('abc', 'def')).toBe(0);
+  });
 });
