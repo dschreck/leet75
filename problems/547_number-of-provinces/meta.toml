@@ -1,0 +1,11 @@
+id = 547
+title = "Number of Provinces"
+difficulty = "Medium"
+category = "Graphs - DFS"
+order = 44
+url = "https://leetcode.com/problems/number-of-provinces/"
+kind = "function"
+entry = "findCircleNum"
+params = [{ name = "isConnected", type = "int[][]" }]
+returns = "int"
+cases = "ready"

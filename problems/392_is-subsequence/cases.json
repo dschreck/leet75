@@ -1,0 +1,4 @@
+[
+  {"name": "example 1: \"abc\" is a subsequence of \"ahbgdc\"", "args": ["abc", "ahbgdc"], "expected": true},
+  {"name": "example 2: \"axc\" is not a subsequence of \"ahbgdc\"", "args": ["axc", "ahbgdc"], "expected": false}
+]

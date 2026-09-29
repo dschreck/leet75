@@ -1,0 +1,5 @@
+[
+  {"name": "example 1: equal lengths", "args": ["abc", "pqr"], "expected": "apbqcr"},
+  {"name": "example 2: word2 is longer, remainder appended", "args": ["ab", "pqrs"], "expected": "apbqrs"},
+  {"name": "example 3: word1 is longer, remainder appended", "args": ["abcd", "pq"], "expected": "apbqcd"}
+]

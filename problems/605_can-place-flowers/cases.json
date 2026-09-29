@@ -1,0 +1,6 @@
+[
+  {"name": "Examples (1)", "args": [[1, 0, 0, 0, 1], 1], "expected": true},
+  {"name": "Examples (2)", "args": [[1, 0, 0, 0, 1], 2], "expected": false},
+  {"name": "Examples (3)", "args": [[1, 0, 0, 0, 0, 1], 2], "expected": false},
+  {"name": "Examples (4)", "args": [[0, 0, 1, 0, 0], 1], "expected": true}
+]

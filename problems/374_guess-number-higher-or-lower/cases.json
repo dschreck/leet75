@@ -1,0 +1,5 @@
+[
+  {"name": "example 1: n = 10, pick = 6", "args": [10], "pick": 6, "expected": 6},
+  {"name": "example 2: n = 1, pick = 1", "args": [1], "pick": 1, "expected": 1},
+  {"name": "example 3: n = 2, pick = 1", "args": [2], "pick": 1, "expected": 1}
+]

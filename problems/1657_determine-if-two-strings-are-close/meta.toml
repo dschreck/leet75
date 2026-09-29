@@ -1,0 +1,11 @@
+id = 1657
+title = "Determine if Two Strings Are Close"
+difficulty = "Medium"
+category = "Hash Map / Set"
+order = 22
+url = "https://leetcode.com/problems/determine-if-two-strings-are-close/"
+kind = "function"
+entry = "closeStrings"
+params = [{ name = "word1", type = "string" }, { name = "word2", type = "string" }]
+returns = "bool"
+cases = "ready"

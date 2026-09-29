@@ -1,0 +1,5 @@
+[
+  {"name": "example 1: two sibling groups", "args": ["3[a]2[bc]"], "expected": "aaabcbc"},
+  {"name": "example 2: nested groups", "args": ["3[a2[c]]"], "expected": "accaccacc"},
+  {"name": "example 3: trailing literal characters", "args": ["2[abc]3[cd]ef"], "expected": "abcabccdcdcdef"}
+]

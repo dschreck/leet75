@@ -1,0 +1,11 @@
+id = 746
+title = "Min Cost Climbing Stairs"
+difficulty = "Easy"
+category = "DP - 1D"
+order = 60
+url = "https://leetcode.com/problems/min-cost-climbing-stairs/"
+kind = "function"
+entry = "minCostClimbingStairs"
+params = [{ name = "cost", type = "int[]" }]
+returns = "int"
+cases = "ready"

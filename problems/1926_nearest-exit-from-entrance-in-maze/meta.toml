@@ -1,0 +1,11 @@
+id = 1926
+title = "Nearest Exit from Entrance in Maze"
+difficulty = "Medium"
+category = "Graphs - BFS"
+order = 47
+url = "https://leetcode.com/problems/nearest-exit-from-entrance-in-maze/"
+kind = "function"
+entry = "nearestExit"
+params = [{ name = "maze", type = "char[][]" }, { name = "entrance", type = "int[]" }]
+returns = "int"
+cases = "ready"

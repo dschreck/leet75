@@ -1,0 +1,11 @@
+id = 199
+title = "Binary Tree Right Side View"
+difficulty = "Medium"
+category = "Binary Tree - BFS"
+order = 39
+url = "https://leetcode.com/problems/binary-tree-right-side-view/"
+kind = "tree"
+entry = "rightSideView"
+params = [{ name = "root", type = "TreeNode" }]
+returns = "int[]"
+cases = "ready"

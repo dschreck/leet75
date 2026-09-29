@@ -1,0 +1,11 @@
+id = 1372
+title = "Longest ZigZag Path in a Binary Tree"
+difficulty = "Medium"
+category = "Binary Tree - DFS"
+order = 37
+url = "https://leetcode.com/problems/longest-zigzag-path-in-a-binary-tree/"
+kind = "tree"
+entry = "longestZigZag"
+params = [{ name = "root", type = "TreeNode" }]
+returns = "int"
+cases = "ready"

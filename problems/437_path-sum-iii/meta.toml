@@ -1,0 +1,11 @@
+id = 437
+title = "Path Sum III"
+difficulty = "Medium"
+category = "Binary Tree - DFS"
+order = 36
+url = "https://leetcode.com/problems/path-sum-iii/"
+kind = "tree"
+entry = "pathSum"
+params = [{ name = "root", type = "TreeNode" }, { name = "targetSum", type = "int" }]
+returns = "int"
+cases = "ready"

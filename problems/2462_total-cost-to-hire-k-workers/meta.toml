@@ -1,0 +1,11 @@
+id = 2462
+title = "Total Cost to Hire K Workers"
+difficulty = "Medium"
+category = "Heap / Priority Queue"
+order = 52
+url = "https://leetcode.com/problems/total-cost-to-hire-k-workers/"
+kind = "function"
+entry = "totalCost"
+params = [{ name = "costs", type = "int[]" }, { name = "k", type = "int" }, { name = "candidates", type = "int" }]
+returns = "int"
+cases = "ready"

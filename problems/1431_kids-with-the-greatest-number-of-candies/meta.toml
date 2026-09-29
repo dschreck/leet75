@@ -1,0 +1,11 @@
+id = 1431
+title = "Kids With the Greatest Number of Candies"
+difficulty = "Easy"
+category = "Array / String"
+order = 3
+url = "https://leetcode.com/problems/kids-with-the-greatest-number-of-candies/"
+kind = "function"
+entry = "kidsWithCandies"
+params = [{ name = "candies", type = "int[]" }, { name = "extraCandies", type = "int" }]
+returns = "bool[]"
+cases = "ready"

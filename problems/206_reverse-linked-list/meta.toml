@@ -1,0 +1,11 @@
+id = 206
+title = "Reverse Linked List"
+difficulty = "Easy"
+category = "Linked List"
+order = 31
+url = "https://leetcode.com/problems/reverse-linked-list/"
+kind = "linked-list"
+entry = "reverseList"
+params = [{ name = "head", type = "ListNode" }]
+returns = "ListNode"
+cases = "ready"

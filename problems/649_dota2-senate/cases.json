@@ -1,0 +1,4 @@
+[
+  {"name": "example 1: Radiant bans the only Dire senator", "args": ["RD"], "expected": "Radiant"},
+  {"name": "example 2: Dire outnumbers Radiant", "args": ["RDD"], "expected": "Dire"}
+]

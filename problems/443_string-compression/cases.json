@@ -1,0 +1,5 @@
+[
+  {"name": "example 1: groups of 2, 2 and 3", "args": [["a", "a", "b", "b", "c", "c", "c"]], "expected": ["a", "2", "b", "2", "c", "3"]},
+  {"name": "example 2: a single character is left uncompressed", "args": [["a"]], "expected": ["a"]},
+  {"name": "example 3: a count of 12 takes two slots", "args": [["a", "b", "b", "b", "b", "b", "b", "b", "b", "b", "b", "b", "b"]], "expected": ["a", "b", "1", "2"]}
+]

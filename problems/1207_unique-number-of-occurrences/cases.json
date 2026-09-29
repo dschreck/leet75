@@ -1,0 +1,5 @@
+[
+  {"name": "example 1: counts 3, 2 and 1 are all distinct", "args": [[1, 2, 2, 1, 1, 3]], "expected": true},
+  {"name": "example 2: both values occur once", "args": [[1, 2]], "expected": false},
+  {"name": "example 3: negative values", "args": [[-3, 0, 1, -3, 1, 1, 1, -3, 10, 0]], "expected": true}
+]

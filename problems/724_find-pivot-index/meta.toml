@@ -1,0 +1,11 @@
+id = 724
+title = "Find Pivot Index"
+difficulty = "Easy"
+category = "Prefix Sum"
+order = 19
+url = "https://leetcode.com/problems/find-pivot-index/"
+kind = "function"
+entry = "pivotIndex"
+params = [{ name = "nums", type = "int[]" }]
+returns = "int"
+cases = "ready"

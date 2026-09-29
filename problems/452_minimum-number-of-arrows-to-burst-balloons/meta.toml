@@ -1,0 +1,11 @@
+id = 452
+title = "Minimum Number of Arrows to Burst Balloons"
+difficulty = "Medium"
+category = "Intervals"
+order = 73
+url = "https://leetcode.com/problems/minimum-number-of-arrows-to-burst-balloons/"
+kind = "function"
+entry = "findMinArrowShots"
+params = [{ name = "points", type = "int[][]" }]
+returns = "int"
+cases = "ready"

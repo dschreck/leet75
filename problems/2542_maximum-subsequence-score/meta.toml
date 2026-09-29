@@ -1,0 +1,11 @@
+id = 2542
+title = "Maximum Subsequence Score"
+difficulty = "Medium"
+category = "Heap / Priority Queue"
+order = 51
+url = "https://leetcode.com/problems/maximum-subsequence-score/"
+kind = "function"
+entry = "maxScore"
+params = [{ name = "nums1", type = "int[]" }, { name = "nums2", type = "int[]" }, { name = "k", type = "int" }]
+returns = "int"
+cases = "ready"

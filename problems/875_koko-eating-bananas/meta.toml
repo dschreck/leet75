@@ -1,0 +1,11 @@
+id = 875
+title = "Koko Eating Bananas"
+difficulty = "Medium"
+category = "Binary Search"
+order = 56
+url = "https://leetcode.com/problems/koko-eating-bananas/"
+kind = "function"
+entry = "minEatingSpeed"
+params = [{ name = "piles", type = "int[]" }, { name = "h", type = "int" }]
+returns = "int"
+cases = "ready"

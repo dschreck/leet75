@@ -1,0 +1,4 @@
+[
+  {"name": "example 1: widest pair is not the tallest pair", "args": [[1, 8, 6, 2, 5, 4, 8, 3, 7]], "expected": 49},
+  {"name": "example 2: two lines only", "args": [[1, 1]], "expected": 1}
+]

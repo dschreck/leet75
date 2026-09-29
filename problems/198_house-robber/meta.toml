@@ -1,0 +1,11 @@
+id = 198
+title = "House Robber"
+difficulty = "Medium"
+category = "DP - 1D"
+order = 61
+url = "https://leetcode.com/problems/house-robber/"
+kind = "function"
+entry = "rob"
+params = [{ name = "nums", type = "int[]" }]
+returns = "int"
+cases = "ready"

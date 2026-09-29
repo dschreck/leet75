@@ -1,0 +1,4 @@
+[
+  {"name": "example 1: replace then two removals", "args": ["horse", "ros"], "expected": 3},
+  {"name": "example 2: mixed removals, replacements and an insert", "args": ["intention", "execution"], "expected": 5}
+]

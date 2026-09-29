@@ -1,0 +1,11 @@
+id = 1768
+title = "Merge Strings Alternately"
+difficulty = "Easy"
+category = "Array / String"
+order = 1
+url = "https://leetcode.com/problems/merge-strings-alternately/"
+kind = "function"
+entry = "mergeAlternately"
+params = [{ name = "word1", type = "string" }, { name = "word2", type = "string" }]
+returns = "string"
+cases = "ready"

@@ -1,0 +1,11 @@
+id = 1456
+title = "Maximum Number of Vowels in a Substring of Given Length"
+difficulty = "Medium"
+category = "Sliding Window"
+order = 15
+url = "https://leetcode.com/problems/maximum-number-of-vowels-in-a-substring-of-given-length/"
+kind = "function"
+entry = "maxVowels"
+params = [{ name = "s", type = "string" }, { name = "k", type = "int" }]
+returns = "int"
+cases = "ready"

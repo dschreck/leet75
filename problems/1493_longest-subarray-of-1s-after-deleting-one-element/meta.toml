@@ -1,0 +1,11 @@
+id = 1493
+title = "Longest Subarray of 1's After Deleting One Element"
+difficulty = "Medium"
+category = "Sliding Window"
+order = 17
+url = "https://leetcode.com/problems/longest-subarray-of-1s-after-deleting-one-element/"
+kind = "function"
+entry = "longestSubarray"
+params = [{ name = "nums", type = "int[]" }]
+returns = "int"
+cases = "ready"

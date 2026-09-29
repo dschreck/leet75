@@ -1,0 +1,11 @@
+id = 11
+title = "Container With Most Water"
+difficulty = "Medium"
+category = "Two Pointers"
+order = 12
+url = "https://leetcode.com/problems/container-with-most-water/"
+kind = "function"
+entry = "maxArea"
+params = [{ name = "height", type = "int[]" }]
+returns = "int"
+cases = "ready"

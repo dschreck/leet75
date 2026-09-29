@@ -1,0 +1,11 @@
+id = 345
+title = "Reverse Vowels of a String"
+difficulty = "Easy"
+category = "Array / String"
+order = 5
+url = "https://leetcode.com/problems/reverse-vowels-of-a-string/"
+kind = "function"
+entry = "reverseVowels"
+params = [{ name = "s", type = "string" }]
+returns = "string"
+cases = "ready"

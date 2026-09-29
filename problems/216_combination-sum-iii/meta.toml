@@ -1,0 +1,12 @@
+id = 216
+title = "Combination Sum III"
+difficulty = "Medium"
+category = "Backtracking"
+order = 58
+url = "https://leetcode.com/problems/combination-sum-iii/"
+kind = "function"
+entry = "combinationSum3"
+params = [{ name = "k", type = "int" }, { name = "n", type = "int" }]
+returns = "int[][]"
+compare = "unordered-nested"
+cases = "ready"

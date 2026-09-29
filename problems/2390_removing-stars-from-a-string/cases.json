@@ -1,0 +1,4 @@
+[
+  {"name": "example 1: three stars remove three characters", "args": ["leet**cod*e"], "expected": "lecoe"},
+  {"name": "example 2: the whole string is removed", "args": ["erase*****"], "expected": ""}
+]

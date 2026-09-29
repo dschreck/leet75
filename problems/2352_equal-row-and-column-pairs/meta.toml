@@ -1,0 +1,11 @@
+id = 2352
+title = "Equal Row and Column Pairs"
+difficulty = "Medium"
+category = "Hash Map / Set"
+order = 23
+url = "https://leetcode.com/problems/equal-row-and-column-pairs/"
+kind = "function"
+entry = "equalPairs"
+params = [{ name = "grid", type = "int[][]" }]
+returns = "int"
+cases = "ready"

@@ -1,0 +1,11 @@
+id = 392
+title = "Is Subsequence"
+difficulty = "Easy"
+category = "Two Pointers"
+order = 11
+url = "https://leetcode.com/problems/is-subsequence/"
+kind = "function"
+entry = "isSubsequence"
+params = [{ name = "s", type = "string" }, { name = "t", type = "string" }]
+returns = "bool"
+cases = "ready"

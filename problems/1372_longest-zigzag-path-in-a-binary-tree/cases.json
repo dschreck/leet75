@@ -1,0 +1,5 @@
+[
+  {"name": "example 1: right -> left -> right", "args": [[1, null, 1, 1, 1, null, null, 1, 1, null, 1, null, null, null, 1]], "expected": 3},
+  {"name": "example 2: left -> right -> left -> right", "args": [[1, 1, 1, null, 1, null, null, 1, 1, null, 1]], "expected": 4},
+  {"name": "example 3: a lone root has no edges", "args": [[1]], "expected": 0}
+]

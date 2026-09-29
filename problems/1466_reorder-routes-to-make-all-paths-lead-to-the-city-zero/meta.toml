@@ -1,0 +1,11 @@
+id = 1466
+title = "Reorder Routes to Make All Paths Lead to the City Zero"
+difficulty = "Medium"
+category = "Graphs - DFS"
+order = 45
+url = "https://leetcode.com/problems/reorder-routes-to-make-all-paths-lead-to-the-city-zero/"
+kind = "function"
+entry = "minReorder"
+params = [{ name = "n", type = "int" }, { name = "connections", type = "int[][]" }]
+returns = "int"
+cases = "ready"

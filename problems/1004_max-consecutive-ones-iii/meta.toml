@@ -1,0 +1,11 @@
+id = 1004
+title = "Max Consecutive Ones III"
+difficulty = "Medium"
+category = "Sliding Window"
+order = 16
+url = "https://leetcode.com/problems/max-consecutive-ones-iii/"
+kind = "function"
+entry = "longestOnes"
+params = [{ name = "nums", type = "int[]" }, { name = "k", type = "int" }]
+returns = "int"
+cases = "ready"

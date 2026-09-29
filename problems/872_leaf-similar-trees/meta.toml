@@ -1,0 +1,11 @@
+id = 872
+title = "Leaf-Similar Trees"
+difficulty = "Easy"
+category = "Binary Tree - DFS"
+order = 34
+url = "https://leetcode.com/problems/leaf-similar-trees/"
+kind = "tree"
+entry = "leafSimilar"
+params = [{ name = "root1", type = "TreeNode" }, { name = "root2", type = "TreeNode" }]
+returns = "bool"
+cases = "ready"

@@ -1,0 +1,11 @@
+id = 435
+title = "Non-overlapping Intervals"
+difficulty = "Medium"
+category = "Intervals"
+order = 72
+url = "https://leetcode.com/problems/non-overlapping-intervals/"
+kind = "function"
+entry = "eraseOverlapIntervals"
+params = [{ name = "intervals", type = "int[][]" }]
+returns = "int"
+cases = "ready"

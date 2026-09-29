@@ -1,0 +1,12 @@
+id = 443
+title = "String Compression"
+difficulty = "Medium"
+category = "Array / String"
+order = 9
+url = "https://leetcode.com/problems/string-compression/"
+kind = "function"
+entry = "compress"
+params = [{ name = "chars", type = "char[]" }]
+returns = "int"
+output = "arg0-prefix"
+cases = "ready"

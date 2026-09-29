@@ -1,0 +1,6 @@
+[
+  {"name": "should return the string with vowels reversed (1)", "args": ["hello"], "expected": "holle"},
+  {"name": "should return the string with vowels reversed (2)", "args": ["leetcode"], "expected": "leotcede"},
+  {"name": "should return the string with vowels reversed (3)", "args": ["aA"], "expected": "Aa"},
+  {"name": "example 1", "args": ["IceCreAm"], "expected": "AceCreIm"}
+]

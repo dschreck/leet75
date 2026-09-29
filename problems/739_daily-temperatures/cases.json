@@ -1,0 +1,5 @@
+[
+  {"name": "example 1: mixed rises and falls", "args": [[73, 74, 75, 71, 69, 72, 76, 73]], "expected": [1, 1, 4, 2, 1, 1, 0, 0]},
+  {"name": "example 2: strictly increasing", "args": [[30, 40, 50, 60]], "expected": [1, 1, 1, 0]},
+  {"name": "example 3: three rising days", "args": [[30, 60, 90]], "expected": [1, 1, 0]}
+]

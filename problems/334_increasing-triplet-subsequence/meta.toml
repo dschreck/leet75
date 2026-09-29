@@ -1,0 +1,11 @@
+id = 334
+title = "Increasing Triplet Subsequence"
+difficulty = "Medium"
+category = "Array / String"
+order = 8
+url = "https://leetcode.com/problems/increasing-triplet-subsequence/"
+kind = "function"
+entry = "increasingTriplet"
+params = [{ name = "nums", type = "int[]" }]
+returns = "bool"
+cases = "ready"

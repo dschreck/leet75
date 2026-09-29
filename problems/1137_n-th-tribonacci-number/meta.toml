@@ -1,0 +1,11 @@
+id = 1137
+title = "N-th Tribonacci Number"
+difficulty = "Easy"
+category = "DP - 1D"
+order = 59
+url = "https://leetcode.com/problems/n-th-tribonacci-number/"
+kind = "function"
+entry = "tribonacci"
+params = [{ name = "n", type = "int" }]
+returns = "int"
+cases = "ready"

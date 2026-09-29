@@ -1,0 +1,12 @@
+id = 2215
+title = "Find the Difference of Two Arrays"
+difficulty = "Easy"
+category = "Hash Map / Set"
+order = 20
+url = "https://leetcode.com/problems/find-the-difference-of-two-arrays/"
+kind = "function"
+entry = "findDifference"
+params = [{ name = "nums1", type = "int[]" }, { name = "nums2", type = "int[]" }]
+returns = "int[][]"
+compare = "unordered-inner"
+cases = "ready"

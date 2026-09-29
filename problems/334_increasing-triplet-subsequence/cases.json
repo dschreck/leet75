@@ -1,0 +1,6 @@
+[
+  {"name": "example 1: strictly increasing array", "args": [[1, 2, 3, 4, 5]], "expected": true},
+  {"name": "example 2: strictly decreasing array", "args": [[5, 4, 3, 2, 1]], "expected": false},
+  {"name": "example 3: non-adjacent triplet", "args": [[2, 1, 5, 0, 4, 6]], "expected": true},
+  {"name": "example 4: negative numbers", "args": [[2, 4, -2, -3]], "expected": false}
+]

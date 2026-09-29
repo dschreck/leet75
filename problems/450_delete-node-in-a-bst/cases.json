@@ -1,0 +1,5 @@
+[
+  {"name": "example 1: deleting 3 has two accepted answers", "args": [[5, 3, 6, 2, 4, null, 7], 3], "expected": [[5, 4, 6, 2, null, null, 7], [5, 2, 6, null, 4, null, 7]], "compare": "one-of"},
+  {"name": "example 2: key not present leaves the tree unchanged", "args": [[5, 3, 6, 2, 4, null, 7], 0], "expected": [5, 3, 6, 2, 4, null, 7]},
+  {"name": "example 3: empty tree", "args": [[], 0], "expected": []}
+]

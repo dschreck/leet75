@@ -1,0 +1,5 @@
+[
+  {"name": "example 1: single spaces", "args": ["the sky is blue"], "expected": "blue is sky the"},
+  {"name": "example 2: leading and trailing spaces are dropped", "args": ["  hello world  "], "expected": "world hello"},
+  {"name": "example 3: runs of spaces collapse to one", "args": ["a good   example"], "expected": "example good a"}
+]

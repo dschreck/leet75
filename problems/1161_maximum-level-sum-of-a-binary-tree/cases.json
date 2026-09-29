@@ -1,0 +1,4 @@
+[
+  {"name": "example 1: level 2 sums to 7", "args": [[1, 7, 0, 7, -8, null, null]], "expected": 2},
+  {"name": "example 2: level 2 wins despite deeper levels", "args": [[989, null, 10250, 98693, -89388, null, null, null, -32127]], "expected": 2}
+]

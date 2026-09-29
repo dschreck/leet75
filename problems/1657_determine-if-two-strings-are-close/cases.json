@@ -1,0 +1,5 @@
+[
+  {"name": "example 1: reachable by swapping characters", "args": ["abc", "bca"], "expected": true},
+  {"name": "example 2: different lengths", "args": ["a", "aa"], "expected": false},
+  {"name": "example 3: reachable by transforming characters", "args": ["cabbba", "abbccc"], "expected": true}
+]

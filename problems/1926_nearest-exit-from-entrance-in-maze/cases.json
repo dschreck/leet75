@@ -1,0 +1,5 @@
+[
+  {"name": "example 1: nearest exit is one step up", "args": [[["+", "+", ".", "+"], [".", ".", ".", "+"], ["+", "+", "+", "."]], [1, 2]], "expected": 1},
+  {"name": "example 2: the entrance itself does not count as an exit", "args": [[["+", "+", "+"], [".", ".", "."], ["+", "+", "+"]], [1, 0]], "expected": 2},
+  {"name": "example 3: no exit reachable", "args": [[[".", "+"]], [0, 0]], "expected": -1}
+]

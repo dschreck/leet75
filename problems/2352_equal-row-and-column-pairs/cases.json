@@ -1,0 +1,4 @@
+[
+  {"name": "example 1: one matching pair", "args": [[[3, 2, 1], [1, 7, 6], [2, 7, 7]]], "expected": 1},
+  {"name": "example 2: duplicate rows each match the same column", "args": [[[3, 1, 2, 2], [1, 4, 4, 5], [2, 4, 2, 2], [2, 4, 2, 2]]], "expected": 3}
+]

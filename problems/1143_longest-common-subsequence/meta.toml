@@ -1,0 +1,11 @@
+id = 1143
+title = "Longest Common Subsequence"
+difficulty = "Medium"
+category = "DP - Multidimensional"
+order = 64
+url = "https://leetcode.com/problems/longest-common-subsequence/"
+kind = "function"
+entry = "longestCommonSubsequence"
+params = [{ name = "text1", type = "string" }, { name = "text2", type = "string" }]
+returns = "int"
+cases = "ready"

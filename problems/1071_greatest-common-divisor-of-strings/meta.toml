@@ -1,0 +1,11 @@
+id = 1071
+title = "Greatest Common Divisor of Strings"
+difficulty = "Easy"
+category = "Array / String"
+order = 2
+url = "https://leetcode.com/problems/greatest-common-divisor-of-strings/"
+kind = "function"
+entry = "gcdOfStrings"
+params = [{ name = "str1", type = "string" }, { name = "str2", type = "string" }]
+returns = "string"
+cases = "ready"

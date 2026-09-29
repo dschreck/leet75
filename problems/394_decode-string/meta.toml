@@ -1,0 +1,11 @@
+id = 394
+title = "Decode String"
+difficulty = "Medium"
+category = "Stack"
+order = 26
+url = "https://leetcode.com/problems/decode-string/"
+kind = "function"
+entry = "decodeString"
+params = [{ name = "s", type = "string" }]
+returns = "string"
+cases = "ready"

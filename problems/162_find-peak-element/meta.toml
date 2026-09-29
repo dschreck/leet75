@@ -1,0 +1,11 @@
+id = 162
+title = "Find Peak Element"
+difficulty = "Medium"
+category = "Binary Search"
+order = 55
+url = "https://leetcode.com/problems/find-peak-element/"
+kind = "function"
+entry = "findPeakElement"
+params = [{ name = "nums", type = "int[]" }]
+returns = "int"
+cases = "ready"

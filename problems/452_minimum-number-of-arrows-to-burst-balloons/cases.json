@@ -1,0 +1,5 @@
+[
+  {"name": "example 1: two arrows cover four balloons", "args": [[[10, 16], [2, 8], [1, 6], [7, 12]]], "expected": 2},
+  {"name": "example 2: disjoint balloons need one arrow each", "args": [[[1, 2], [3, 4], [5, 6], [7, 8]]], "expected": 4},
+  {"name": "example 3: touching endpoints count as overlapping", "args": [[[1, 2], [2, 3], [3, 4], [4, 5]]], "expected": 2}
+]

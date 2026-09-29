@@ -1,0 +1,11 @@
+id = 1207
+title = "Unique Number of Occurrences"
+difficulty = "Easy"
+category = "Hash Map / Set"
+order = 21
+url = "https://leetcode.com/problems/unique-number-of-occurrences/"
+kind = "function"
+entry = "uniqueOccurrences"
+params = [{ name = "arr", type = "int[]" }]
+returns = "bool"
+cases = "ready"

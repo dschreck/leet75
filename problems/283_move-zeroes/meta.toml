@@ -1,0 +1,12 @@
+id = 283
+title = "Move Zeroes"
+difficulty = "Easy"
+category = "Two Pointers"
+order = 10
+url = "https://leetcode.com/problems/move-zeroes/"
+kind = "function"
+entry = "moveZeroes"
+params = [{ name = "nums", type = "int[]" }]
+returns = "void"
+output = "arg0"
+cases = "ready"

@@ -1,0 +1,11 @@
+id = 994
+title = "Rotting Oranges"
+difficulty = "Medium"
+category = "Graphs - BFS"
+order = 48
+url = "https://leetcode.com/problems/rotting-oranges/"
+kind = "function"
+entry = "orangesRotting"
+params = [{ name = "grid", type = "int[][]" }]
+returns = "int"
+cases = "ready"

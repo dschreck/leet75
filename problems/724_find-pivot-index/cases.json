@@ -1,0 +1,5 @@
+[
+  {"name": "example 1: pivot at index 3", "args": [[1, 7, 3, 6, 5, 6]], "expected": 3},
+  {"name": "example 2: no pivot exists", "args": [[1, 2, 3]], "expected": -1},
+  {"name": "example 3: pivot at index 0 with an empty left side", "args": [[2, 1, -1]], "expected": 0}
+]

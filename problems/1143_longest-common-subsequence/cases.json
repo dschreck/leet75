@@ -1,0 +1,5 @@
+[
+  {"name": "example 1: subsequence \"ace\"", "args": ["abcde", "ace"], "expected": 3},
+  {"name": "example 2: identical strings", "args": ["abc", "abc"], "expected": 3},
+  {"name": "example 3: no common subsequence", "args": ["abc", "def"], "expected": 0}
+]

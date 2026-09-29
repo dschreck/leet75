@@ -1,0 +1,11 @@
+id = 2130
+title = "Maximum Twin Sum of a Linked List"
+difficulty = "Medium"
+category = "Linked List"
+order = 32
+url = "https://leetcode.com/problems/maximum-twin-sum-of-a-linked-list/"
+kind = "linked-list"
+entry = "pairSum"
+params = [{ name = "head", type = "ListNode" }]
+returns = "int"
+cases = "ready"

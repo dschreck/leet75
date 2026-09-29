@@ -1,0 +1,11 @@
+id = 2300
+title = "Successful Pairs of Spells and Potions"
+difficulty = "Medium"
+category = "Binary Search"
+order = 54
+url = "https://leetcode.com/problems/successful-pairs-of-spells-and-potions/"
+kind = "function"
+entry = "successfulPairs"
+params = [{ name = "spells", type = "int[]" }, { name = "potions", type = "int[]" }, { name = "success", type = "int" }]
+returns = "int[]"
+cases = "ready"

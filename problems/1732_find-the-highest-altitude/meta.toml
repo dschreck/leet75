@@ -1,0 +1,11 @@
+id = 1732
+title = "Find the Highest Altitude"
+difficulty = "Easy"
+category = "Prefix Sum"
+order = 18
+url = "https://leetcode.com/problems/find-the-highest-altitude/"
+kind = "function"
+entry = "largestAltitude"
+params = [{ name = "gain", type = "int[]" }]
+returns = "int"
+cases = "ready"

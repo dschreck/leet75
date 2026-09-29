@@ -1,0 +1,5 @@
+[
+  {"name": "example 1: delete the single zero", "args": [[1, 1, 0, 1]], "expected": 3},
+  {"name": "example 2: delete the zero joining two runs", "args": [[0, 1, 1, 1, 0, 1, 1, 0, 1]], "expected": 5},
+  {"name": "example 3: all ones still costs one deletion", "args": [[1, 1, 1]], "expected": 2}
+]

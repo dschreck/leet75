@@ -1,0 +1,11 @@
+id = 136
+title = "Single Number"
+difficulty = "Easy"
+category = "Bit Manipulation"
+order = 68
+url = "https://leetcode.com/problems/single-number/"
+kind = "function"
+entry = "singleNumber"
+params = [{ name = "nums", type = "int[]" }]
+returns = "int"
+cases = "ready"

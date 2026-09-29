@@ -1,0 +1,11 @@
+id = 1448
+title = "Count Good Nodes in Binary Tree"
+difficulty = "Medium"
+category = "Binary Tree - DFS"
+order = 35
+url = "https://leetcode.com/problems/count-good-nodes-in-binary-tree/"
+kind = "tree"
+entry = "goodNodes"
+params = [{ name = "root", type = "TreeNode" }]
+returns = "int"
+cases = "ready"

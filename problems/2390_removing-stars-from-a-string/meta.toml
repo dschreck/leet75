@@ -1,0 +1,11 @@
+id = 2390
+title = "Removing Stars From a String"
+difficulty = "Medium"
+category = "Stack"
+order = 24
+url = "https://leetcode.com/problems/removing-stars-from-a-string/"
+kind = "function"
+entry = "removeStars"
+params = [{ name = "s", type = "string" }]
+returns = "string"
+cases = "ready"

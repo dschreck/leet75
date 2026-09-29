@@ -1,0 +1,11 @@
+id = 62
+title = "Unique Paths"
+difficulty = "Medium"
+category = "DP - Multidimensional"
+order = 63
+url = "https://leetcode.com/problems/unique-paths/"
+kind = "function"
+entry = "uniquePaths"
+params = [{ name = "m", type = "int" }, { name = "n", type = "int" }]
+returns = "int"
+cases = "ready"

@@ -1,0 +1,11 @@
+id = 1268
+title = "Search Suggestions System"
+difficulty = "Medium"
+category = "Trie"
+order = 71
+url = "https://leetcode.com/problems/search-suggestions-system/"
+kind = "function"
+entry = "suggestedProducts"
+params = [{ name = "products", type = "string[]" }, { name = "searchWord", type = "string" }]
+returns = "string[][]"
+cases = "ready"

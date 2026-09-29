@@ -1,0 +1,5 @@
+[
+  {"name": "example 1: every twin pair sums to 6", "args": [[5, 4, 2, 1]], "expected": 6},
+  {"name": "example 2: largest twin sum is 7", "args": [[4, 2, 2, 3]], "expected": 7},
+  {"name": "example 3: single twin pair", "args": [[1, 100000]], "expected": 100001}
+]

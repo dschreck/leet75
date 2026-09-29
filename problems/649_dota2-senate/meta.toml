@@ -1,0 +1,11 @@
+id = 649
+title = "Dota2 Senate"
+difficulty = "Medium"
+category = "Queue"
+order = 28
+url = "https://leetcode.com/problems/dota2-senate/"
+kind = "function"
+entry = "predictPartyVictory"
+params = [{ name = "senate", type = "string" }]
+returns = "string"
+cases = "ready"

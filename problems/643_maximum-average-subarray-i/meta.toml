@@ -1,0 +1,12 @@
+id = 643
+title = "Maximum Average Subarray I"
+difficulty = "Easy"
+category = "Sliding Window"
+order = 14
+url = "https://leetcode.com/problems/maximum-average-subarray-i/"
+kind = "function"
+entry = "findMaxAverage"
+params = [{ name = "nums", type = "int[]" }, { name = "k", type = "int" }]
+returns = "double"
+compare = "float"
+cases = "ready"

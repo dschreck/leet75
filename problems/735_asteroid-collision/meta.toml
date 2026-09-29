@@ -1,0 +1,11 @@
+id = 735
+title = "Asteroid Collision"
+difficulty = "Medium"
+category = "Stack"
+order = 25
+url = "https://leetcode.com/problems/asteroid-collision/"
+kind = "function"
+entry = "asteroidCollision"
+params = [{ name = "asteroids", type = "int[]" }]
+returns = "int[]"
+cases = "ready"

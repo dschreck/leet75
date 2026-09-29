@@ -1,0 +1,11 @@
+id = 1161
+title = "Maximum Level Sum of a Binary Tree"
+difficulty = "Medium"
+category = "Binary Tree - BFS"
+order = 40
+url = "https://leetcode.com/problems/maximum-level-sum-of-a-binary-tree/"
+kind = "tree"
+entry = "maxLevelSum"
+params = [{ name = "root", type = "TreeNode" }]
+returns = "int"
+cases = "ready"

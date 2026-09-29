@@ -1,0 +1,11 @@
+id = 1318
+title = "Minimum Flips to Make a OR b Equal to c"
+difficulty = "Medium"
+category = "Bit Manipulation"
+order = 69
+url = "https://leetcode.com/problems/minimum-flips-to-make-a-or-b-equal-to-c/"
+kind = "function"
+entry = "minFlips"
+params = [{ name = "a", type = "int" }, { name = "b", type = "int" }, { name = "c", type = "int" }]
+returns = "int"
+cases = "ready"

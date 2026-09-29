@@ -1,0 +1,5 @@
+[
+  {"name": "example 1: five nodes", "args": [[1, 2, 3, 4, 5]], "expected": [5, 4, 3, 2, 1]},
+  {"name": "example 2: two nodes", "args": [[1, 2]], "expected": [2, 1]},
+  {"name": "example 3: empty list", "args": [[]], "expected": []}
+]

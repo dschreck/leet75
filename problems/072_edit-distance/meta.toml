@@ -1,0 +1,11 @@
+id = 72
+title = "Edit Distance"
+difficulty = "Medium"
+category = "DP - Multidimensional"
+order = 66
+url = "https://leetcode.com/problems/edit-distance/"
+kind = "function"
+entry = "minDistance"
+params = [{ name = "word1", type = "string" }, { name = "word2", type = "string" }]
+returns = "int"
+cases = "ready"

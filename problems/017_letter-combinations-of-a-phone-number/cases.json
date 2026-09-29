@@ -1,0 +1,4 @@
+[
+  {"name": "example 1: two digits", "args": ["23"], "expected": ["ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf"]},
+  {"name": "example 2: single digit", "args": ["2"], "expected": ["a", "b", "c"]}
+]

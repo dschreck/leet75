@@ -1,0 +1,11 @@
+id = 450
+title = "Delete Node in a BST"
+difficulty = "Medium"
+category = "Binary Search Tree"
+order = 42
+url = "https://leetcode.com/problems/delete-node-in-a-bst/"
+kind = "tree"
+entry = "deleteNode"
+params = [{ name = "root", type = "TreeNode" }, { name = "key", type = "int" }]
+returns = "TreeNode"
+cases = "ready"

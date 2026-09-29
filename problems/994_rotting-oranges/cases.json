@@ -1,0 +1,5 @@
+[
+  {"name": "example 1: all oranges rot in 4 minutes", "args": [[[2, 1, 1], [1, 1, 0], [0, 1, 1]]], "expected": 4},
+  {"name": "example 2: one orange is unreachable", "args": [[[2, 1, 1], [0, 1, 1], [1, 0, 1]]], "expected": -1},
+  {"name": "example 3: no fresh oranges to begin with", "args": [[[0, 2]]], "expected": 0}
+]

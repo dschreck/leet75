@@ -1,0 +1,6 @@
+[
+  {"name": "example 1: str2 divides str1", "args": ["ABCABC", "ABC"], "expected": "ABC"},
+  {"name": "example 2: common divisor is shorter than both", "args": ["ABABAB", "ABAB"], "expected": "AB"},
+  {"name": "example 3: no common divisor", "args": ["LEET", "CODE"], "expected": ""},
+  {"name": "example 4: shared prefix but no common divisor", "args": ["AAAAAB", "AAA"], "expected": ""}
+]

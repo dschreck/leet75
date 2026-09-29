@@ -1,0 +1,5 @@
+[
+  {"name": "example 1: four good nodes", "args": [[3, 1, 4, 3, null, 1, 5]], "expected": 4},
+  {"name": "example 2: node 2 is shadowed by an ancestor", "args": [[3, 3, null, 4, 2]], "expected": 3},
+  {"name": "example 3: the root is always good", "args": [[1]], "expected": 1}
+]

@@ -1,0 +1,11 @@
+id = 605
+title = "Can Place Flowers"
+difficulty = "Easy"
+category = "Array / String"
+order = 4
+url = "https://leetcode.com/problems/can-place-flowers/"
+kind = "function"
+entry = "canPlaceFlowers"
+params = [{ name = "flowerbed", type = "int[]" }, { name = "n", type = "int" }]
+returns = "bool"
+cases = "ready"

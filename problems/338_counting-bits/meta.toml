@@ -1,0 +1,11 @@
+id = 338
+title = "Counting Bits"
+difficulty = "Easy"
+category = "Bit Manipulation"
+order = 67
+url = "https://leetcode.com/problems/counting-bits/"
+kind = "function"
+entry = "countBits"
+params = [{ name = "n", type = "int" }]
+returns = "int[]"
+cases = "ready"

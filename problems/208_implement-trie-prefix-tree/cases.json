@@ -1,0 +1,3 @@
+[
+  {"name": "example 1: the documented call sequence", "ops": ["Trie", "insert", "search", "search", "startsWith", "insert", "search"], "args": [[], ["apple"], ["apple"], ["app"], ["app"], ["app"], ["app"]], "expected": [null, null, true, false, true, null, true]}
+]

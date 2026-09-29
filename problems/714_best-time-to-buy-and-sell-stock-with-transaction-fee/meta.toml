@@ -1,0 +1,11 @@
+id = 714
+title = "Best Time to Buy and Sell Stock with Transaction Fee"
+difficulty = "Medium"
+category = "DP - Multidimensional"
+order = 65
+url = "https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/"
+kind = "function"
+entry = "maxProfit"
+params = [{ name = "prices", type = "int[]" }, { name = "fee", type = "int" }]
+returns = "int"
+cases = "ready"

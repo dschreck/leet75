@@ -1,0 +1,5 @@
+[
+  {"name": "example 1: substring \"iii\"", "args": ["abciiidef", 3], "expected": 3},
+  {"name": "example 2: every window is all vowels", "args": ["aeiou", 2], "expected": 2},
+  {"name": "example 3: best window holds 2 vowels", "args": ["leetcode", 3], "expected": 2}
+]

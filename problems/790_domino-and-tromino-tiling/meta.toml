@@ -1,0 +1,11 @@
+id = 790
+title = "Domino and Tromino Tiling"
+difficulty = "Medium"
+category = "DP - 1D"
+order = 62
+url = "https://leetcode.com/problems/domino-and-tromino-tiling/"
+kind = "function"
+entry = "numTilings"
+params = [{ name = "n", type = "int" }]
+returns = "int"
+cases = "ready"

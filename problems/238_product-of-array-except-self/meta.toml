@@ -1,0 +1,11 @@
+id = 238
+title = "Product of Array Except Self"
+difficulty = "Medium"
+category = "Array / String"
+order = 7
+url = "https://leetcode.com/problems/product-of-array-except-self/"
+kind = "function"
+entry = "productExceptSelf"
+params = [{ name = "nums", type = "int[]" }]
+returns = "int[]"
+cases = "ready"

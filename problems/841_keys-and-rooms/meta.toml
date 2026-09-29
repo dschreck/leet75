@@ -1,0 +1,11 @@
+id = 841
+title = "Keys and Rooms"
+difficulty = "Medium"
+category = "Graphs - DFS"
+order = 43
+url = "https://leetcode.com/problems/keys-and-rooms/"
+kind = "function"
+entry = "canVisitAllRooms"
+params = [{ name = "rooms", type = "int[][]" }]
+returns = "bool"
+cases = "ready"

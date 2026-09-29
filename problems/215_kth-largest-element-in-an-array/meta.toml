@@ -1,0 +1,11 @@
+id = 215
+title = "Kth Largest Element in an Array"
+difficulty = "Medium"
+category = "Heap / Priority Queue"
+order = 49
+url = "https://leetcode.com/problems/kth-largest-element-in-an-array/"
+kind = "function"
+entry = "findKthLargest"
+params = [{ name = "nums", type = "int[]" }, { name = "k", type = "int" }]
+returns = "int"
+cases = "ready"

@@ -1,0 +1,9 @@
+id = 2336
+title = "Smallest Number in Infinite Set"
+difficulty = "Medium"
+category = "Heap / Priority Queue"
+order = 50
+url = "https://leetcode.com/problems/smallest-number-in-infinite-set/"
+kind = "design"
+entry = "SmallestInfiniteSet"
+cases = "ready"

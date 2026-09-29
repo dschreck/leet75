@@ -1,0 +1,12 @@
+id = 399
+title = "Evaluate Division"
+difficulty = "Medium"
+category = "Graphs - DFS"
+order = 46
+url = "https://leetcode.com/problems/evaluate-division/"
+kind = "function"
+entry = "calcEquation"
+params = [{ name = "equations", type = "string[][]" }, { name = "values", type = "double[]" }, { name = "queries", type = "string[][]" }]
+returns = "double[]"
+compare = "float"
+cases = "ready"
