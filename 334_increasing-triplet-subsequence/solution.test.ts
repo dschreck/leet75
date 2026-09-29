@@ -16,4 +16,8 @@ describe('334. Increasing Triplet Subsequence', () => {
   it('example 3: non-adjacent triplet', () => {
     expect(increasingTriplet([2, 1, 5, 0, 4, 6])).toBe(true);
   });
+
+  it('example 4: negative numbers', () => {
+    expect(increasingTriplet([2,4,-2,-3])).toBe(false);
+  })
 });
