@@ -1,0 +1,11 @@
+id = 9002
+title = "Cases Pending (runner fixture)"
+difficulty = "Easy"
+category = "Fixture"
+order = 10
+url = "https://example.invalid/pending"
+kind = "function"
+entry = "pending"
+params = [{ name = "n", type = "int" }]
+returns = "int"
+cases = "pending"

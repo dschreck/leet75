@@ -1,0 +1,11 @@
+id = 700
+title = "Search in a Binary Search Tree (runner fixture)"
+difficulty = "Easy"
+category = "Fixture"
+order = 3
+url = "https://example.invalid/search-in-a-binary-search-tree"
+kind = "tree"
+entry = "searchBST"
+params = [{ name = "root", type = "TreeNode" }, { name = "val", type = "int" }]
+returns = "TreeNode"
+cases = "ready"

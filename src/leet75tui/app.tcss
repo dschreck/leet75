@@ -1,0 +1,48 @@
+/* Catalog */
+
+#problems {
+    height: 1fr;
+}
+
+#catalog-bar {
+    height: 1;
+}
+
+#filter {
+    width: 1fr;
+}
+
+#solved {
+    width: auto;
+    padding: 0 1;
+    color: $text-muted;
+}
+
+/* Exercise */
+
+#split {
+    height: 1fr;
+}
+
+#editor {
+    width: 3fr;
+    height: 1fr;
+}
+
+#side {
+    width: 2fr;
+    height: 1fr;
+}
+
+#side ContentSwitcher,
+#side TabPane {
+    height: 1fr;
+}
+
+#statement-scroll {
+    padding: 0 1;
+}
+
+#output-log {
+    height: 1fr;
+}

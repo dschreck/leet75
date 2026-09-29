@@ -1,0 +1,11 @@
+id = 104
+title = "Maximum Depth of Binary Tree"
+difficulty = "Easy"
+category = "Binary Tree - DFS"
+order = 38
+url = "https://leetcode.com/problems/maximum-depth-of-binary-tree/"
+kind = "tree"
+entry = "maxDepth"
+params = [{ name = "root", type = "TreeNode" }]
+returns = "int"
+cases = "ready"

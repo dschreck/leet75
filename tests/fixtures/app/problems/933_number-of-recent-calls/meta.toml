@@ -1,0 +1,9 @@
+id = 933
+title = "Number of Recent Calls"
+difficulty = "Easy"
+category = "Queue"
+order = 27
+url = "https://leetcode.com/problems/number-of-recent-calls/"
+kind = "design"
+entry = "RecentCounter"
+cases = "pending"

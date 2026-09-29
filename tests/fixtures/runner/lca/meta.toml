@@ -1,0 +1,11 @@
+id = 236
+title = "Lowest Common Ancestor of a Binary Tree (runner fixture)"
+difficulty = "Medium"
+category = "Fixture"
+order = 4
+url = "https://example.invalid/lowest-common-ancestor-of-a-binary-tree"
+kind = "tree"
+entry = "lowestCommonAncestor"
+params = [{ name = "root", type = "TreeNode" }, { name = "p", type = "TreeNodeRef" }, { name = "q", type = "TreeNodeRef" }]
+returns = "TreeNodeRef"
+cases = "ready"

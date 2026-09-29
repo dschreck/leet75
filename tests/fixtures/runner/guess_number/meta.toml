@@ -1,0 +1,11 @@
+id = 374
+title = "Guess Number Higher or Lower (runner fixture)"
+difficulty = "Easy"
+category = "Fixture"
+order = 6
+url = "https://example.invalid/guess-number-higher-or-lower"
+kind = "interactive"
+entry = "guessNumber"
+params = [{ name = "n", type = "int" }]
+returns = "int"
+cases = "ready"

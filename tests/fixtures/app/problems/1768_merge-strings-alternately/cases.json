@@ -1,0 +1,4 @@
+[
+  { "args": ["abc", "pqr"], "expected": "apbqcr" },
+  { "args": ["ab", "pqrs"], "expected": "apbqrs" }
+]

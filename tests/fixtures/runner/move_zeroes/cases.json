@@ -1,0 +1,4 @@
+[
+  {"name": "zeroes spread out", "args": [[0, 1, 0, 3, 12]], "expected": [1, 3, 12, 0, 0]},
+  {"name": "single zero", "args": [[0]], "expected": [0]}
+]

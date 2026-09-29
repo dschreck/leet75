@@ -1,0 +1,11 @@
+id = 1
+title = "Add (runner fixture)"
+difficulty = "Easy"
+category = "Fixture"
+order = 1
+url = "https://example.invalid/add"
+kind = "function"
+entry = "add"
+params = [{ name = "a", type = "int" }, { name = "b", type = "int" }]
+returns = "int"
+cases = "ready"

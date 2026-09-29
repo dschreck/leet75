@@ -1,0 +1,5 @@
+[
+  {"name": "subtree found", "args": [[4, 2, 7, 1, 3], 2], "expected": [2, 1, 3]},
+  {"name": "value missing", "args": [[4, 2, 7, 1, 3], 5], "expected": []},
+  {"name": "null holes", "args": [[5, 3, 8, null, 4, null, 9], 8], "expected": [8, null, 9]}
+]

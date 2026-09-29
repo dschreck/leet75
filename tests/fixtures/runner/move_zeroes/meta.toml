@@ -1,0 +1,12 @@
+id = 283
+title = "Move Zeroes (runner fixture)"
+difficulty = "Easy"
+category = "Fixture"
+order = 7
+url = "https://example.invalid/move-zeroes"
+kind = "function"
+entry = "moveZeroes"
+params = [{ name = "nums", type = "int[]" }]
+returns = "void"
+output = "arg0"
+cases = "ready"

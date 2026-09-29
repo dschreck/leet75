@@ -1,0 +1,4 @@
+[
+  {"name": "documented sequence", "ops": ["RecentCounter", "ping", "ping", "ping", "ping"], "args": [[], [1], [100], [3001], [3002]], "expected": [null, 1, 2, 3, 3]},
+  {"name": "old calls expire", "ops": ["RecentCounter", "ping", "ping"], "args": [[], [1], [5000]], "expected": [null, 1, 1]}
+]

@@ -1,0 +1,5 @@
+[
+  {"name": "groups of 2, 2 and 3", "args": [["a", "a", "b", "b", "c", "c", "c"]], "expected": ["a", "2", "b", "2", "c", "3"]},
+  {"name": "single character", "args": [["a"]], "expected": ["a"]},
+  {"name": "count of 12", "args": [["a", "b", "b", "b", "b", "b", "b", "b", "b", "b", "b", "b", "b"]], "expected": ["a", "b", "1", "2"]}
+]

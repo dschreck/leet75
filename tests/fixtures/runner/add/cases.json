@@ -1,0 +1,5 @@
+[
+  {"name": "small", "args": [1, 2], "expected": 3},
+  {"name": "larger", "args": [20, 22], "expected": 42},
+  {"args": [-4, 4], "expected": 0}
+]

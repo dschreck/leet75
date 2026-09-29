@@ -1,0 +1,12 @@
+id = 9001
+title = "Distinct Values, Descending (runner fixture)"
+difficulty = "Easy"
+category = "Fixture"
+order = 9
+url = "https://example.invalid/distinct"
+kind = "function"
+entry = "distinct"
+params = [{ name = "nums", type = "int[]" }]
+returns = "int[]"
+compare = "exact"
+cases = "ready"

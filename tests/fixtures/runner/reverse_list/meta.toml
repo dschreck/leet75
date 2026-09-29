@@ -1,0 +1,11 @@
+id = 206
+title = "Reverse Linked List (runner fixture)"
+difficulty = "Easy"
+category = "Fixture"
+order = 2
+url = "https://example.invalid/reverse-linked-list"
+kind = "linked-list"
+entry = "reverseList"
+params = [{ name = "head", type = "ListNode" }]
+returns = "ListNode"
+cases = "ready"

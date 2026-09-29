@@ -1,0 +1,9 @@
+id = 933
+title = "Number of Recent Calls (runner fixture)"
+difficulty = "Easy"
+category = "Fixture"
+order = 5
+url = "https://example.invalid/number-of-recent-calls"
+kind = "design"
+entry = "RecentCounter"
+cases = "ready"

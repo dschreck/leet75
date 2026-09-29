@@ -1,0 +1,5 @@
+[
+  {"name": "pick in the middle", "args": [10], "pick": 6, "expected": 6},
+  {"name": "single number", "args": [1], "pick": 1, "expected": 1},
+  {"name": "pick at the top", "args": [100], "pick": 100, "expected": 100}
+]
