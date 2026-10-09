@@ -199,18 +199,6 @@ def test_there_are_75_problems_with_every_file() -> None:
         assert not missing, f"{slug} lacks {missing}"
 
 
-def test_problem_slugs_match_the_legacy_folders() -> None:
-    legacy = sorted(
-        path.name
-        for path in ROOT.iterdir()
-        if re.fullmatch(r"\d+_[a-z0-9-]+", path.name)
-        and (path / "solution.ts").is_file()
-    )
-    if not legacy:
-        pytest.skip("the legacy NNN_slug/ folders have been removed")
-    assert legacy == SLUGS
-
-
 def test_plan_orders_are_1_to_75() -> None:
     assert sorted(meta(slug)["order"] for slug in SLUGS) == list(range(1, 76))
 

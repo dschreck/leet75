@@ -167,13 +167,13 @@ Ranked by probability × impact.
 - [x] Harness adapters for `linked-list`, `tree`, `design`, `interactive` kinds (both harnesses); `compare` modes
 - [ ] Hand-review the 19 non-`function` problems and every `compare` override (`test_special_problems_keep_their_modelling` covers the modelling; no human review yet)
 - [ ] `tests/test_legacy_solutions.py` — every migrated TS solution passes its cases (success criterion 6). Checked ad hoc on 2026-09-29: all 10 `workbook/*.ts` pass via `run_solution`, ~75 ms each; not yet a test
-- [ ] `git rm` legacy `NNN_slug/` dirs, `package.json`, `pnpm-lock.yaml`, `vitest.config.mts`, `tsconfig.json`, `.eslintrc.json`, `.prettierrc`, `scripts/update-readme.sh`, and `scripts/migrate_legacy.py` once migration is committed (no dead code)
+- [x] `git rm` legacy `NNN_slug/` dirs, `package.json`, `pnpm-lock.yaml`, `vitest.config.mts`, `tsconfig.json`, `.eslintrc.json`, `.prettierrc`, `scripts/update-readme.sh`, and `scripts/migrate_legacy.py` once migration is committed (no dead code). Done 2026-10-09; `problems/` is now hand-edited and guarded by `tests/test_content.py`
 - **Scope-cut:** ship with unmigrated problems flagged `cases: pending` in the Catalog.
 
 ### Phase 5: MVP polish (M)
 - [x] `widgets/code_editor.py` + `widgets/completion.py` — simple autocomplete: `ctrl+space` popup over language keywords + identifiers in the buffer + `entry` name
 - [x] Status column glyphs (`✓` solved, `~` attempted, `·` unsolved) + solved counter in Catalog; footer key hints per screen
-- [ ] `README.md` rewrite — install (`uv tool install -e .`), key map, content format for adding problems
+- [x] `README.md` rewrite — install (`uv tool install -e .`), key map, content format for adding problems
 - [x] Quality gates to green — ruff, mypy and pytest
 - **Scope-cut:** autocomplete is the first thing dropped; the `$EDITOR` hatch covers it.
 
@@ -254,8 +254,8 @@ README) has not run.
 - [ ] Exercise layout snapshot test
 - [ ] Code review of the runner: timeout, process-group kill, output cap (risk 4)
 - [ ] Hand review of the 19 non-`function` problems and `compare` overrides
-- [ ] `README.md` rewrite
-- [ ] `git rm` of the legacy layout (Phase 4 last task)
+- [x] `README.md` rewrite
+- [x] `git rm` of the legacy layout (Phase 4 last task)
 - [ ] Manual verification in Windows Terminal (Verification steps 1, 3, 4); success criteria 1–5 are covered by Pilot tests only
 
 **Known issue**
