@@ -1,4 +1,4 @@
-"""Catalog loading and repository-root resolution."""
+"""Catalog loading."""
 
 from pathlib import Path
 
@@ -12,7 +12,6 @@ from leet75tui.catalog import (
     load_catalog,
     load_problem,
 )
-from leet75tui.paths import RepoNotFoundError, find_repo_root
 
 TWO_SUM_META = """\
 id = 1
@@ -106,29 +105,3 @@ def test_load_catalog_rejects_duplicate_order(app_repo: Path) -> None:
 
     with pytest.raises(CatalogError, match="order 27 is already used by"):
         load_catalog(app_repo)
-
-
-def test_find_repo_root_prefers_env_var(app_repo: Path, tmp_path: Path) -> None:
-    root = find_repo_root({"LEET75_HOME": str(app_repo)}, start=tmp_path / "elsewhere.py")
-
-    assert root == app_repo.resolve()
-
-
-def test_find_repo_root_rejects_env_var_without_problems(tmp_path: Path) -> None:
-    with pytest.raises(RepoNotFoundError, match="has no problems/ directory"):
-        find_repo_root({"LEET75_HOME": str(tmp_path)})
-
-
-def test_find_repo_root_walks_up_from_package(app_repo: Path) -> None:
-    module = app_repo / "src" / "leet75tui" / "paths.py"
-
-    assert find_repo_root({}, start=module) == app_repo.resolve()
-
-
-def test_find_repo_root_explains_failure(tmp_path: Path) -> None:
-    with pytest.raises(RepoNotFoundError, match="LEET75_HOME"):
-        find_repo_root({}, start=tmp_path / "a" / "b.py")
-
-
-def test_find_repo_root_defaults_to_this_checkout() -> None:
-    assert (find_repo_root({}) / "src" / "leet75tui").is_dir()

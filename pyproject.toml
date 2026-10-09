@@ -41,7 +41,7 @@ python_version = "3.12"
 strict = true
 mypy_path = "src"
 files = ["src"]
-exclude = ["^problems/", "^workbook/", "^tests/fixtures/"]
+exclude = ["^src/leet75tui/problems/", "^tests/fixtures/"]
 
 [tool.coverage.run]
 source = ["leet75tui"]
@@ -57,7 +57,7 @@ show_missing = true
 [tool.ruff]
 target-version = "py312"
 line-length = 100
-extend-exclude = ["problems", "workbook", "tests/fixtures"]
+extend-exclude = ["src/leet75tui/problems", "tests/fixtures"]
 
 [tool.ruff.lint]
 select = ["E", "F", "I", "UP"]

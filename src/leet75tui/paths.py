@@ -1,34 +1,41 @@
-"""Locate the leet75 repository (the directory that holds ``problems/``)."""
+"""Where the bundled problems live and where each workspace keeps its solutions."""
 
 import os
+import re
 from collections.abc import Mapping
+from importlib.resources import files
 from pathlib import Path
 
-HOME_ENV_VAR = "LEET75_HOME"
 PROBLEMS_DIRNAME = "problems"
+APP_DIRNAME = "leet75tui"
+WORKSPACES_DIRNAME = "workspaces"
+DEFAULT_WORKSPACE = "default"
+# Starts alphanumeric and has no separators, so a name never escapes the workspaces directory.
+WORKSPACE_NAME = re.compile(r"[A-Za-z0-9][A-Za-z0-9._-]{0,63}")
 
 
-class RepoNotFoundError(Exception):
-    """Raised when no directory containing ``problems/`` can be found."""
+class WorkspaceNameError(ValueError):
+    """Raised for a workspace name that is not a plain directory name."""
 
 
-def find_repo_root(environ: Mapping[str, str] = os.environ, start: Path = Path(__file__)) -> Path:
-    """Return the repository root.
+def content_root() -> Path:
+    """The installed package directory; it ships ``problems/`` with the starters."""
+    return Path(str(files("leet75tui")))
 
-    ``$LEET75_HOME`` wins when set; otherwise walk up from ``start`` (this package, so an
-    editable install works from any working directory) to the first directory that
-    contains ``problems/``.
-    """
-    home = environ.get(HOME_ENV_VAR)
-    if home:
-        root = Path(home).expanduser().resolve()
-        if not (root / PROBLEMS_DIRNAME).is_dir():
-            raise RepoNotFoundError(f"{HOME_ENV_VAR}={home} has no {PROBLEMS_DIRNAME}/ directory")
-        return root
-    for directory in start.resolve().parents:
-        if (directory / PROBLEMS_DIRNAME).is_dir():
-            return directory
-    raise RepoNotFoundError(
-        f"no directory containing {PROBLEMS_DIRNAME}/ above {start}; "
-        f"set {HOME_ENV_VAR} or install with `uv tool install -e .`"
-    )
+
+def data_home(environ: Mapping[str, str] = os.environ) -> Path:
+    """``$XDG_DATA_HOME/leet75tui``, or ``~/.local/share/leet75tui`` when unset or relative."""
+    base = Path(environ.get("XDG_DATA_HOME", ""))
+    if not base.is_absolute():
+        base = Path.home() / ".local" / "share"
+    return base / APP_DIRNAME
+
+
+def workspace_dir(name: str, environ: Mapping[str, str] = os.environ) -> Path:
+    """``<data home>/workspaces/<name>``; it is created on the first save, not here."""
+    if not WORKSPACE_NAME.fullmatch(name):
+        raise WorkspaceNameError(
+            f"invalid workspace name {name!r}: use up to 64 letters, digits, '.', '_' or '-', "
+            "starting with a letter or digit"
+        )
+    return data_home(environ) / WORKSPACES_DIRNAME / name

@@ -282,7 +282,7 @@ async def test_runner_crash_is_reported(app_repo: Path) -> None:
     async def broken_runner(problem_dir: Path, language: Language, source: str) -> RunResult:
         raise RuntimeError("harness bug")
 
-    app = Leet75App(app_repo, runner=broken_runner, node_finder=lambda: NODE)
+    app = Leet75App(app_repo, app_repo / "workbook", runner=broken_runner, node_finder=lambda: NODE)
     async with app.run_test(size=SIZE) as pilot:
         await open_problem(app, DEPTH)
 

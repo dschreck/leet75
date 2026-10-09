@@ -11,9 +11,26 @@ a problem catalog, a code editor, and a test runner for TypeScript and Python.
 ## Install and run
 
 ```bash
-uv tool install -e .   # puts `leet75tui` on PATH; edits to the repo take effect immediately
+uv tool install .      # puts `leet75tui` on PATH; the 75 problems ship inside the package
 leet75tui
 ```
+
+For development, use `uv tool install -e .` so that edits to the repo take effect immediately.
+
+## Workspaces
+
+Your solutions and progress live outside the repo, in a named workspace:
+
+```bash
+leet75tui                     # workspace "default"
+leet75tui --workspace pass-2  # a new name starts from a fresh slate
+```
+
+Each workspace is a folder under `~/.local/share/leet75tui/workspaces/`, or
+`$XDG_DATA_HOME/leet75tui/workspaces/` when that variable is set. It holds `<NNN_slug>.ts` /
+`.py` solution files and `progress.json`, and it is created the first time you save. Old workspaces stay
+where they are, so you can reopen one with `--workspace <name>`. To remove one, delete its folder.
+The catalog header shows the active workspace.
 
 ## Keys
 
@@ -45,9 +62,8 @@ becomes solved the first time every case passes.
 
 | Path | Contents |
 |---|---|
-| `problems/<NNN_slug>/` | `problem.md` (statement), `meta.toml` (metadata and call signature), `cases.json` (tests), `starter.ts`, `starter.py` |
-| `workbook/` | Your solutions (`<NNN_slug>.ts` / `.py`) and `progress.json` |
 | `src/leet75tui/` | The app: screens, editor widgets, and the subprocess runner with its Python and Node harnesses |
+| `src/leet75tui/problems/<NNN_slug>/` | `problem.md` (statement), `meta.toml` (metadata and call signature), `cases.json` (tests), `starter.ts`, `starter.py`. Shipped as package data |
 
 ### Adding or editing a problem
 
@@ -69,7 +85,7 @@ becomes solved the first time every case passes.
 
 | Variable | Effect |
 |---|---|
-| `LEET75_HOME` | Repo root. By default the app walks up from the installed package to find `problems/`. |
+| `XDG_DATA_HOME` | Base folder for workspaces (`$XDG_DATA_HOME/leet75tui/workspaces/`). Defaults to `~/.local/share`. |
 | `LEET75_NODE` | Node binary. Otherwise the runner tries `node` on PATH, then the newest `~/.nvm/versions/node/*/bin/node`. |
 
 ## Development

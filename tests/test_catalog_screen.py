@@ -1,5 +1,6 @@
 """Catalog screen via Pilot: rows, filter, open, quit, footer hints; app entry point."""
 
+import shutil
 from pathlib import Path
 
 import pytest
@@ -164,27 +165,64 @@ async def test_keys_from_terminal_bytes(app_repo: Path, fake_runner: FakeRunner)
     assert app.return_code == 0
 
 
-def test_main_reports_missing_repo(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> None:
-    monkeypatch.setenv("LEET75_HOME", str(tmp_path))
+@pytest.fixture
+def workspaces(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> Path:
+    """Point the data home at tmp_path; return its workspaces/ directory."""
+    monkeypatch.setenv("XDG_DATA_HOME", str(tmp_path))
+    return tmp_path / "leet75tui" / "workspaces"
 
-    with pytest.raises(SystemExit, match=r"leet75tui: .*has no problems/ directory"):
-        main()
+
+@pytest.fixture
+def launched(monkeypatch: pytest.MonkeyPatch) -> list[Leet75App]:
+    """Apps that main() would have run."""
+    apps: list[Leet75App] = []
+    monkeypatch.setattr(Leet75App, "run", lambda self: apps.append(self))
+    return apps
 
 
-def test_main_reports_bad_content(app_repo: Path, monkeypatch: pytest.MonkeyPatch) -> None:
-    (app_repo / "workbook" / "progress.json").write_text("{", encoding="utf-8")
-    monkeypatch.setenv("LEET75_HOME", str(app_repo))
+def solved(app: Leet75App) -> int:
+    return app.context.progress.solved_count(problem.slug for problem in app.context.catalog)
+
+
+def test_main_opens_the_default_workspace_with_bundled_problems(
+    workspaces: Path, launched: list[Leet75App]
+) -> None:
+    main([])
+
+    (app,) = launched
+    assert app.context.workbook.directory == workspaces / "default"
+    assert app.sub_title == "workspace: default"
+    assert len(app.context.catalog) == 75
+    assert not (workspaces / "default").exists(), "launching must not write anything"
+
+
+def test_main_named_workspace_is_a_fresh_slate_beside_the_others(
+    app_repo: Path, workspaces: Path, launched: list[Leet75App]
+) -> None:
+    shutil.copytree(app_repo / "workbook", workspaces / "default")
+
+    main(["--workspace", "pass-2"])
+    main(["-w", "default"])
+
+    fresh, default = launched
+    assert fresh.context.workbook.directory == workspaces / "pass-2"
+    assert fresh.sub_title == "workspace: pass-2"
+    assert solved(fresh) == 0
+    assert solved(default) == 1
+
+
+def test_main_rejects_a_workspace_name_with_a_path(
+    workspaces: Path, launched: list[Leet75App]
+) -> None:
+    with pytest.raises(SystemExit, match=r"leet75tui: invalid workspace name '\.\./x'"):
+        main(["--workspace", "../x"])
+
+    assert launched == []
+
+
+def test_main_reports_a_corrupt_progress_file(workspaces: Path, launched: list[Leet75App]) -> None:
+    (workspaces / "default").mkdir(parents=True)
+    (workspaces / "default" / "progress.json").write_text("{", encoding="utf-8")
 
     with pytest.raises(SystemExit, match=r"leet75tui: .*invalid JSON"):
-        main()
-
-
-def test_main_runs_the_app(app_repo: Path, monkeypatch: pytest.MonkeyPatch) -> None:
-    launched: list[Leet75App] = []
-    monkeypatch.setenv("LEET75_HOME", str(app_repo))
-    monkeypatch.setattr(Leet75App, "run", lambda self: launched.append(self))
-
-    main()
-
-    assert len(launched) == 1
-    assert launched[0].context.workbook.directory == app_repo.resolve() / "workbook"
+        main([])

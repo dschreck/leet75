@@ -1,4 +1,4 @@
-"""Validate the problem content (problems/<slug>/) and the workbook (workbook/)."""
+"""Validate the problem content shipped in the package (leet75tui/problems/<slug>/)."""
 
 from __future__ import annotations
 
@@ -7,14 +7,13 @@ import functools
 import json
 import re
 import tomllib
-from pathlib import Path
 from typing import Any
 
 import pytest
 
-ROOT = Path(__file__).resolve().parent.parent
-PROBLEMS = ROOT / "problems"
-WORKBOOK = ROOT / "workbook"
+from leet75tui.paths import PROBLEMS_DIRNAME, content_root
+
+PROBLEMS = content_root() / PROBLEMS_DIRNAME
 SLUGS = sorted(path.name for path in PROBLEMS.iterdir() if path.is_dir())
 PROBLEM_FILES = ("problem.md", "meta.toml", "cases.json", "starter.ts", "starter.py")
 
@@ -22,7 +21,6 @@ KINDS = {"function", "linked-list", "tree", "design", "interactive"}
 COMPARES = {"exact", "unordered", "unordered-inner", "unordered-nested", "float"}
 CASE_COMPARES = COMPARES | {"one-of"}
 OUTPUTS = {"return", "arg0", "arg0-prefix"}
-STATUSES = {"UNSOLVED", "ATTEMPTED", "SOLVED"}
 VALUE_TYPE = re.compile(
     r"(?:int|double|bool|string|char)(?:\[\])*|ListNode|TreeNode|TreeNodeRef"
 )
@@ -357,23 +355,3 @@ def test_special_problems_keep_their_modelling() -> None:
     for slug, (param_types, returns) in SPECIAL_SIGNATURES.items():
         assert [p["type"] for p in meta(slug)["params"]] == param_types, slug
         assert meta(slug)["returns"] == returns, slug
-
-
-def test_progress_json_follows_the_contract() -> None:
-    text = (WORKBOOK / "progress.json").read_text(encoding="utf-8")
-    data = json.loads(text)
-    assert text == json.dumps(data, indent=2, sort_keys=True) + "\n"
-    assert set(data) == {"version", "problems"}
-    assert data["version"] == 1
-    for slug, entry in data["problems"].items():
-        assert slug in SLUGS
-        assert set(entry) == {"status", "lastRunAt"}
-        assert entry["status"] in STATUSES
-        assert entry["lastRunAt"] is None or isinstance(entry["lastRunAt"], str)
-
-
-def test_workbook_files_belong_to_known_problems() -> None:
-    for path in WORKBOOK.iterdir():
-        if path.name != "progress.json":
-            assert path.suffix in {".ts", ".py"}, path.name
-            assert path.stem in SLUGS, path.name

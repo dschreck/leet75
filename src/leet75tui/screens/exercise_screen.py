@@ -49,7 +49,7 @@ def run_editor(path: Path) -> str | None:
 
 
 class ExerciseScreen(Screen[None]):
-    """Edit, run and read one problem; edits autosave to ``workbook/``."""
+    """Edit, run and read one problem; edits autosave to the workspace."""
 
     BINDINGS: ClassVar[list[BindingType]] = [
         # Windows Terminal delivers Ctrl+Enter as ctrl+j; ctrl+enter covers CSI-u terminals.

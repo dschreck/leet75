@@ -23,7 +23,7 @@ NODE = Path("/usr/bin/node")
 
 def make_app(root: Path, runner: FakeRunner, node: Path | None = NODE) -> Leet75App:
     """The app on ``root`` with a fake runner; ``node=None`` simulates a missing Node."""
-    return Leet75App(root, runner=runner, node_finder=lambda: node)
+    return Leet75App(root, root / "workbook", runner=runner, node_finder=lambda: node)
 
 
 async def open_problem(app: Leet75App, slug: str) -> ExerciseScreen:

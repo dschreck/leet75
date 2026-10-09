@@ -1,4 +1,4 @@
-"""Solve status per problem, persisted in ``workbook/progress.json``."""
+"""Solve status per problem, persisted in the workspace's ``progress.json``."""
 
 import json
 from collections.abc import Iterable

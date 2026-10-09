@@ -15,7 +15,7 @@ DEPTH = "104_maximum-depth-of-binary-tree"
 
 @pytest.fixture
 def workbook(app_repo: Path) -> Workbook:
-    return Workbook.in_repo(app_repo)
+    return Workbook(app_repo / "workbook")
 
 
 @pytest.fixture

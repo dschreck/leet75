@@ -47,8 +47,9 @@ via `TextArea.register_language()` and ships `queries/highlights.scm`; Node v24.
 ```
 pyproject.toml                    # [project.scripts] leet75tui = "leet75tui.app:main"; textual>=8.2,<9
 src/leet75tui/
-  app.py                          # App, global bindings, screen stack
+  app.py                          # App, screen stack, `--workspace NAME` CLI
   app.tcss
+  paths.py                        # content_root() (package data), data_home(), workspace_dir()
   catalog.py                      # load problems/*/meta.toml -> Problem dataclass
   progress.py                     # status store: unsolved | attempted | solved (+ last run time)
   workbook.py                     # user solution files: load/save/starter fallback
@@ -59,13 +60,14 @@ src/leet75tui/
   runner/runner.py                # async subprocess, timeout, process-group kill -> RunResult
   runner/harness.py               # Python harness (runs in child process)
   runner/harness.mjs              # Node harness (runs in child process)
-problems/NNN_slug/
-  problem.md                      # statement (migrated from README.md "Instructions")
-  meta.toml                       # id, title, difficulty, category, order, url, kind, entry, params, compare
-  cases.json                      # [{ "args": [...], "expected": ... }] or design-op sequences
-  starter.ts | starter.py
-workbook/NNN_slug.ts | .py        # the user's solutions (in git, like today)
-workbook/progress.json
+  problems/NNN_slug/              # package data, shipped in the wheel
+    problem.md                    # statement (migrated from README.md "Instructions")
+    meta.toml                     # id, title, difficulty, category, order, url, kind, entry, params, compare
+    cases.json                    # [{ "args": [...], "expected": ... }] or design-op sequences
+    starter.ts | starter.py
+~/.local/share/leet75tui/workspaces/<name>/   # outside the repo; $XDG_DATA_HOME respected
+  NNN_slug.ts | .py               # the user's solutions
+  progress.json
 tests/                            # pytest: catalog, runner (both langs), Pilot key-flow, snapshots
 ```
 
@@ -108,8 +110,8 @@ Output tab renders structured results, not raw text.
 - [ ] Typing `/tree` filters to the Binary Tree / BST rows; Esc restores all 75; Enter opens the Exercise view.
 - [ ] Ctrl+Enter (received as `ctrl+j`; F5 fallback) on a correct solution shows all cases passing in the Output tab within 3 s, for both TS and Python.
 - [ ] A `while (true) {}` solution is killed after 5 s with a "timed out" result; the UI stays responsive throughout.
-- [ ] Status flips to solved after a full pass and survives restart (`workbook/progress.json`).
-- [ ] `pytest` runs every migrated legacy TS solution against its `cases.json` and they pass (except the 2 in-progress ones, 334/443, marked `xfail` if still failing). This validates the cases and the TS harness together.
+- [ ] Status flips to solved after a full pass and survives restart (`<workspace>/progress.json`).
+- [ ] `pytest` runs a known-good solution for one problem of every `kind`, in both languages, through the real runner against the bundled `cases.json`, and they pass. This validates the cases and both harnesses together. (Before 2026-10-09 this used the migrated legacy TS solutions, which the user chose to discard.)
 - [ ] Quality gates: `ruff check .` 0 errors, `mypy --strict src/` 0 errors, `pytest --cov=src` > 70%.
 
 ## Pre-Mortem
@@ -166,7 +168,7 @@ Ranked by probability × impact.
 - [x] Extend `scripts/migrate_legacy.py` — vitest `expect(fn(args)).toBe/toEqual(x)` → `cases.json`; generate `starter.ts` / `starter.py` from signatures (all 75 migrated, none `pending`; `tests/test_content.py` checks the contract)
 - [x] Harness adapters for `linked-list`, `tree`, `design`, `interactive` kinds (both harnesses); `compare` modes
 - [ ] Hand-review the 19 non-`function` problems and every `compare` override (`test_special_problems_keep_their_modelling` covers the modelling; no human review yet)
-- [ ] `tests/test_legacy_solutions.py` — every migrated TS solution passes its cases (success criterion 6). Checked ad hoc on 2026-09-29: all 10 `workbook/*.ts` pass via `run_solution`, ~75 ms each; not yet a test
+- [x] ~~`tests/test_legacy_solutions.py`~~ — dropped 2026-10-09: the user chose to discard the migrated `workbook/` solutions when moving to workspaces. Checked ad hoc on 2026-09-29 before that: all 10 passed via `run_solution`, ~75 ms each. A known-good solution per kind would cover the harness better (see Status)
 - [x] `git rm` legacy `NNN_slug/` dirs, `package.json`, `pnpm-lock.yaml`, `vitest.config.mts`, `tsconfig.json`, `.eslintrc.json`, `.prettierrc`, `scripts/update-readme.sh`, and `scripts/migrate_legacy.py` once migration is committed (no dead code). Done 2026-10-09; `problems/` is now hand-edited and guarded by `tests/test_content.py`
 - **Scope-cut:** ship with unmigrated problems flagged `cases: pending` in the Catalog.
 
@@ -215,7 +217,7 @@ No cycles.
 
 | Decision | Default | Alternative |
 |---|---|---|
-| Where solutions live | In-repo `workbook/` (versioned, like today) | `~/.local/share/leet75tui/` (repo stays content-only) |
+| Where solutions live | ~~In-repo `workbook/` (versioned, like today)~~. Changed 2026-10-09: named workspaces under `~/.local/share/leet75tui/workspaces/`, so the problems ship with the package and the user can start a fresh slate | `--reset` that archives the current slate; `--workbook DIR` path override only |
 | Python solution shape | LeetCode `class Solution` | Bare `def fn(...)` |
 | Fork mechanism | Branch `tui` in this repo | New repo, this one archived |
 
@@ -244,13 +246,14 @@ README) has not run.
 
 | Gate | Result |
 |---|---|
-| `uv run pytest --cov=src` | 793 passed, 99% coverage (node found via the nvm fallback; no PATH setup needed) |
+| `uv run pytest --cov=src` | 803 passed, 99% coverage as of 2026-10-09 (node found via the nvm fallback; no PATH setup needed) |
 | `uv run mypy --strict src/` | 0 issues, 25 files |
-| `uv run ruff check .` | 0 errors. `[tool.ruff]` (added 2026-10-09) sets `line-length = 100`, the width the code was written to; it excludes `problems`, `workbook` and `tests/fixtures`, whose stubs deliberately mirror LeetCode's Python template |
+| `uv run ruff check .` | 0 errors. `[tool.ruff]` (added 2026-10-09) sets `line-length = 100`, the width the code was written to; it excludes `src/leet75tui/problems` and `tests/fixtures`, whose stubs deliberately mirror LeetCode's Python template |
 
 **Remaining for MVP**
 - [x] `[tool.ruff]` config in `pyproject.toml`
-- [ ] `tests/test_legacy_solutions.py` (success criterion 6)
+- [x] Bundled problems + named workspaces (2026-10-09): `problems/` moved to `src/leet75tui/problems/` (package data; the wheel was built and installed outside the repo, then run in both languages); solutions and progress live in `~/.local/share/leet75tui/workspaces/<name>/`; `leet75tui --workspace NAME`; the repo's `workbook/` was removed at the user's request
+- [ ] Known-good solution per `kind` through the real runner (success criterion 6)
 - [ ] Exercise layout snapshot test
 - [ ] Code review of the runner: timeout, process-group kill, output cap (risk 4)
 - [ ] Hand review of the 19 non-`function` problems and `compare` overrides
