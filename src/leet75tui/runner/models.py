@@ -10,7 +10,7 @@ class RunOutcome(StrEnum):
 
     PASSED = "PASSED"  # every case passed
     FAILED = "FAILED"  # ran to completion; at least one case failed or raised
-    TIMED_OUT = "TIMED_OUT"  # killed at the timeout; `cases` holds the cases finished before the kill
+    TIMED_OUT = "TIMED_OUT"  # killed at the timeout; `cases` holds those finished before the kill
     ERROR = "ERROR"  # could not run: syntax/import error, missing entry, no cases, harness crash
     UNAVAILABLE = "UNAVAILABLE"  # interpreter missing (e.g. no Node >= 23.6); `message` says why
 

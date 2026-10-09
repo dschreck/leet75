@@ -174,7 +174,7 @@ Ranked by probability × impact.
 - [x] `widgets/code_editor.py` + `widgets/completion.py` — simple autocomplete: `ctrl+space` popup over language keywords + identifiers in the buffer + `entry` name
 - [x] Status column glyphs (`✓` solved, `~` attempted, `·` unsolved) + solved counter in Catalog; footer key hints per screen
 - [ ] `README.md` rewrite — install (`uv tool install -e .`), key map, content format for adding problems
-- [ ] Quality gates to green — mypy and pytest green; ruff needs the `[tool.ruff]` config (see Status)
+- [x] Quality gates to green — ruff, mypy and pytest
 - **Scope-cut:** autocomplete is the first thing dropped; the `$EDITOR` hatch covers it.
 
 ### Post-MVP (not planned here)
@@ -246,11 +246,10 @@ README) has not run.
 |---|---|
 | `uv run pytest --cov=src` | 793 passed, 99% coverage (node found via the nvm fallback; no PATH setup needed) |
 | `uv run mypy --strict src/` | 0 issues, 25 files |
-| `uv run ruff check src tests scripts --extend-exclude tests/fixtures` | 0 errors |
-| `uv run ruff check .` | 154 errors, all in `problems/*/starter.py` and `tests/fixtures` (UP006/UP035/UP045 from `List`/`Optional`, F821 from harness-injected `ListNode`/`TreeNode`): the stubs deliberately mirror LeetCode's Python template. The repo has no ruff config yet. Fix: add `[tool.ruff]` with `extend-exclude = ["problems", "workbook", "tests/fixtures"]` to `pyproject.toml`; the edit is blocked by the config-protection hook and waits for user approval |
+| `uv run ruff check .` | 0 errors. `[tool.ruff]` (added 2026-10-09) sets `line-length = 100`, the width the code was written to; it excludes `problems`, `workbook` and `tests/fixtures`, whose stubs deliberately mirror LeetCode's Python template |
 
 **Remaining for MVP**
-- [ ] `[tool.ruff]` config in `pyproject.toml` (needs approval, see above)
+- [x] `[tool.ruff]` config in `pyproject.toml`
 - [ ] `tests/test_legacy_solutions.py` (success criterion 6)
 - [ ] Exercise layout snapshot test
 - [ ] Code review of the runner: timeout, process-group kill, output cap (risk 4)

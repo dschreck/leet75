@@ -13,7 +13,7 @@ uv run leet75tui                           # launch the app
 uv tool install -e .                       # put `leet75tui` on PATH (editable)
 uv run pytest --cov=src                    # ~800 tests, ~45 s
 uv run mypy --strict src/
-uv run ruff check src tests scripts --extend-exclude tests/fixtures
+uv run ruff check .                        # config in pyproject.toml; content dirs are excluded
 uv run python scripts/migrate_legacy.py    # regenerate problems/ + workbook/ from the legacy folders
 ```
 
